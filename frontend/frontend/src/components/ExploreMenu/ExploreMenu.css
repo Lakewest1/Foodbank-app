@@ -1,0 +1,89 @@
+.Explore-menu{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Explore-menu h1{
+  color: #262626;
+  font-weight: 500;
+}
+.explore-menu-text{
+  max-width: 60%;
+  color: #808080;
+}
+.explore-menu-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  margin: 20px 0px;
+  width: 85%;
+  overflow-x: scroll;   /*-- To make the menu scroll*/
+}
+/*-- To hide the scroll bar at the bottom-----*/
+.explore-menu-list::-webkit-scrollbar{
+  display: none;
+}
+/*-- To style the menu image-----*/
+.explore-menu-list img{
+  width: 7.5vw;
+  min-width: 80px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.explore-menu-list p{
+  margin-top: 10px;
+  font-size: max(1.4vw,16px);
+  color: #747474;
+  cursor: pointer;
+}
+.Explore-menu hr{
+  margin: 10px 0px;
+  height: 2px;
+  background-color: cyan;
+  border: none;
+}
+.explore-menu-list .active{
+  border: 5px dotted rgb(112, 7, 7);
+  border-radius: 50%;
+  padding: 2px;
+}
+@media (max-width:450px) {
+.Explore-menu{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+ 
+}
+.Explore-menu h1{
+  color: #262626;
+  font-weight: 500;
+  font-size: 25px;
+  text-shadow: 0px 10px 10px #cacaca;
+  margin-bottom: 10px;
+}
+.explore-menu-text{
+  max-width: 90%;
+  color: #808080;
+}
+.explore-menu-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  margin: 20px 0px;
+  width: 100%;
+  overflow-x: scroll;   /*-- To make the menu scroll*/
+}
+  
+}
+
+
+
+
+

@@ -1,0 +1,71 @@
+.Footer{
+  color: silver;
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 8vw;
+  padding-top: 80px;
+  margin-top: 100px;
+  
+}
+.Footer-content{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 80px;
+}
+.Footer-left img{
+  width: 30%;
+  align-items: center;
+  
+}
+.Footer-left button{
+  padding: 10px 35px;
+  border-radius: 10px;
+}
+.Footer-left,.Footer-right,.Footer-center{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap:20px;
+}
+.Footer-left li,.Footer-right li,.Footer-Center li{
+  list-style: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.Footer-left p{
+  font-size: 18px;
+}
+.Footer-right h2, .Footer-Center h2{
+  color: white;
+  margin-bottom: 20px;
+
+}
+.soc-icon{
+  display: flex;
+  gap: 10px;
+}
+.Footer hr{
+  width: 100%;
+  height: 2px;
+  color: grey;
+  margin: 20px 0px;
+ 
+}
+@media (max-width:1050px) {
+  .Footer{
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+  }
+  .Footer-content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  font-size: 15px;
+}
+}
