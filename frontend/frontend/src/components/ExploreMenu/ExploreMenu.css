@@ -69,6 +69,7 @@
 .explore-menu-text{
   max-width: 90%;
   color: #808080;
+  font-size: 13px;
 }
 .explore-menu-list{
   display: flex;

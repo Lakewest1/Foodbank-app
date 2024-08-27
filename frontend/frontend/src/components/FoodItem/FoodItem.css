@@ -5,14 +5,15 @@
   box-shadow: 0px 0px 10px #000015;
   transition: 0.3s;
   animation: fadeIn;
+  height: 100%;
 }
-.fooditem :hover{
-    transform: scale(1.02);
+.fooditem::after:hover{
+  transform: scale(1.01);
+}
 
-}
 .food-img{
   width: 100%;
-  height: 35vh;
+ 
   border-radius: 15px 15px 0px 0px;
   animation: beat 5s infinite;
  
@@ -27,7 +28,7 @@
 
 }
 .food-info{
-  padding: 10px;
+  padding: 5px;
   width: 100%;
 
 }
@@ -41,9 +42,9 @@ font-weight:500;
 }
 
 .food-item-desc{
-  font-size: 20px;
+  font-size: 100%;
   color: #676767;
-  padding: 0px;
+  padding: 10px;
   margin: 10px 0px;
   
   
@@ -52,7 +53,7 @@ font-weight:500;
   font-size: 22px;
   color: red;
   font-weight: 500;
-  margin: 10px 0px;
+  
 }
 .food-info a img{
   background-color:orange;
@@ -92,4 +93,8 @@ background-color: white;
 }
 .food-item-counter img{
   width:30px;
+}
+.price-cart{
+  display: flex;
+  justify-content: space-between;
 }
