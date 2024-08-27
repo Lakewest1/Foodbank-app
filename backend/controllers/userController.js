@@ -2,11 +2,12 @@ import userModel from "../models/userModel.js";
 // for authentication we import jwt//
 import jwt from "jsonwebtoken";
 // for securing the user details and hatching password we import bcrypt//
+import bcrypt from 'bcryptjs';
 
 // To check if the email and password is correct //
 import validator from "validator";
 
-const bcrypt = require('bcryptjs');
+
 
 
 
