@@ -24,7 +24,7 @@ import lakewest from './lakewest.png'
 import order_icon from './order_icon.png'
 import upload_area from './upload_area.png'
 
-const export url = "https://foodbank-backend.onrender.com"
+const export url = "https://foodbankbackend.onrender.com"
 export const assets = {
     logo,
     Grova,
