@@ -9,21 +9,20 @@ const MyOrders = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
 
-  const fetchOrders = async () => {
-    try {
-      const response = await axios.post(url + "/api/order/userorders", {}, { headers: { token } });
-      if (response.status === 200) {  // If response is success// we save it
-        setData(response.data.data);
-        console.log(response.data.data)
-      } else {
-        setError("Failed to fetch orders");
-      }
-    } catch (error) {
-      
-      setError("Failed to fetch orders");
+ const fetchOrders = async () => {
+  try {
+    const response = await axios.post(`${url}/api/order/userorders`, {}, { headers: { token } });
+    if (response.status === 200) {
+      setData(response.data.data);
+      console.log(response.data.data);
+    } else {
+      setError(`Failed to fetch orders: ${response.statusText}`);
     }
-    
-  };
+  } catch (error) {
+    setError(`Failed to fetch orders: ${error.message}`);
+  }
+};
+
 
     useEffect(() => {
     if (token) {     // If token is available//
