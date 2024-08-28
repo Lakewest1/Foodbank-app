@@ -10,8 +10,9 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);  // Now we have the su
 // We will create arrow function for place Order// Placing user order from front end cart//
 const placeOrder = async (req, res) => {
 
-  const frontend_url = "http://localhost:5173"   // We define the frontend url so we can connect the payment to it//
-
+  //const frontend_url = "http://localhost:5173"   // We define the frontend url so we can connect the payment to it//
+  
+  const frontend_url = https://foodbank-app.onrender.com
 
 
   try {
