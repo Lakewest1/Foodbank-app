@@ -9,19 +9,34 @@ const MyOrders = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
 
-  const fetchOrders = async () => {
-    try {
-      const response = await axios.post(`${url}/api/order/userorders`, {}, { headers: { token } });
-      if (response.status === 200) {
-        setData(response.data.data);
-        console.log(response.data.data);
-      } else {
-        setError(`Failed to fetch orders: ${response.statusText}`);
-      }
-    } catch (error) {
+const fetchOrders = async () => {
+  try {
+    const response = await axios.post(
+      `${url}/api/order/userorders`, 
+      {}, 
+      { headers: { Authorization: `Bearer ${token}` } } // Assuming 'token' is a Bearer token
+    );
+
+    if (response.status === 200) {
+      setData(response.data.data);
+      console.log(response.data.data);
+    } else {
+      setError(`Failed to fetch orders: ${response.statusText}`);
+    }
+  } catch (error) {
+    if (error.response) {
+      // The request was made and the server responded with a status code that falls out of the range of 2xx
+      setError(`Failed to fetch orders: ${error.response.statusText}`);
+    } else if (error.request) {
+      // The request was made but no response was received
+      setError('Failed to fetch orders: No response received');
+    } else {
+      // Something happened in setting up the request that triggered an Error
       setError(`Failed to fetch orders: ${error.message}`);
     }
-  };
+  }
+};
+
 
 
   useEffect(() => {
