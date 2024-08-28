@@ -12,7 +12,7 @@ const placeOrder = async (req, res) => {
 
   //const frontend_url = "http://localhost:5173"   // We define the frontend url so we can connect the payment to it//
   
-  const frontend_url = https://foodbankfrontend.onrender.com//
+  const frontend_url = "https://foodbankfrontend.onrender.com"
 
 
   try {
