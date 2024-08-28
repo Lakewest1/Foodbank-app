@@ -4,10 +4,12 @@ import "./add.css"
 import axios from "axios"
 import { toast } from "react-toastify"
 
-const add = ({url}) => {    // We detructure the url gotten from app,jsx
+const Add = ({url}) => {    // We detructure the url gotten from app,jsx
 
   /* declaring variable for backend url so we can connect to it//  NB second to last step//
   const url = "http://localhost:4000";*/
+
+  //const url = "https://foodbankbackend.onrender.com" //
   
 // For the image upload//
   const [image, setImage] = useState(false)
@@ -110,10 +112,10 @@ const add = ({url}) => {    // We detructure the url gotten from app,jsx
             <select onChange={onchangeHandler} name="category">
               <option value="Salad">Salad</option>
               <option value="Rolls">Rolls</option>
-              <option value="Desert">Desert</option>
+              <option value="Deserts">Deserts</option>
               <option value="Sandwich">Sandwich</option>
               <option value="Cake">Cake</option>
-              <option value="pure veg">Pur Veg</option>
+              <option value="Pure Veg">Pure Veg</option>
               <option value="Pasta">Pasta</option>
               <option value="Noodles">Noodles</option>
               <option value="Jollof">Jollof</option>
@@ -135,4 +137,4 @@ const add = ({url}) => {    // We detructure the url gotten from app,jsx
   )
 }
 
-export default add
+export default Add

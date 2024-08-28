@@ -447,10 +447,10 @@
   font-size: 80%;
 }
 .home-indicator a{
-  background-color: #cacaca;
+  background-color: red;
   margin-top: 100px;
   padding: 5px;
-  color: black;
+  color: white;
   border-radius: 10px;
   font-size: 15px;
   position: absolute;
