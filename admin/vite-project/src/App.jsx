@@ -13,7 +13,8 @@ const App = () => {
 
   // We are defining the url of both add.jsx and list.jsx in this place  // Then we go down to pass it in each route//Then go to add.jsx  and list.jsx to destructure it
 
-  const url = "http://localhost:4000";
+  //const url = "http://localhost:4000";//
+  const url = "https://foodbank-backend.onrender.com"
 
   return (
     <div>
