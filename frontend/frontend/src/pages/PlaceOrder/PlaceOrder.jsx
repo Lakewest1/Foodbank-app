@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom"
 const PlaceOrder = () => {
 
   // let fetch the total cart amount from used sontext//         //to add stripe first take token from d context//
-  const { getTotalCartAmount,token,foodList,cartItems,url,food_list } = useContext(StoreContext);
+  const { getTotalCartAmount,token,cartItems,url,food_list } = useContext(StoreContext);
   
   // Now we craete UseState to take all the data enter in the payment form//
   const [data, setData] = useState({    
@@ -85,7 +85,7 @@ const PlaceOrder = () => {
     {
       navigate('/cart')      // It will remain in the cart nd not go to orderpage//
       }
-  },[token])
+  },[token,getTotalCartAmount,navigate])
   
 
 

@@ -28,7 +28,7 @@ const MyOrders = () => {
     if (token) {     // If token is available//
       fetchOrders();
     }
-  }, [fetchOrders]);
+  }, [token]);
 
 
 

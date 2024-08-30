@@ -2,7 +2,8 @@ import {useContext, useState, } from 'react'
 import './LoginPopup.css'
 import { assets} from '../../assets/assets.js'
 import { StoreContext } from '../../context/StoreContext.jsx'
-import axios from  'axios'
+import axios from 'axios'
+import PropTypes from 'prop-types';
 
 const LoginPopup = ({setShowLogin}) => {
 
@@ -94,5 +95,8 @@ const LoginPopup = ({setShowLogin}) => {
  
   )
 }
-
+// prop validation//
+LoginPopup.propTypes = {
+  setShowLogin: PropTypes.func.isRequired,
+};
 export default LoginPopup

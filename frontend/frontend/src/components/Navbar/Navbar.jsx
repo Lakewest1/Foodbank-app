@@ -3,6 +3,7 @@ import './Navbar.css'
 import { assets } from '../../assets/assets'
 import {Link, useNavigate} from 'react-router-dom'
 import { StoreContext } from '../../context/StoreContext'
+import PropTypes from 'prop-types';
 
 const Navbar = ({setShowLogin}) => {              {/*we deetructure the set shwlogin here so Navbar can use it */}
 
@@ -63,5 +64,7 @@ const Navbar = ({setShowLogin}) => {              {/*we deetructure the set shwl
     </div>
   )
 }
-
+Navbar.propTypes = {
+  setShowLogin: PropTypes.func.isRequired, // Ensure it's a function and required
+};
 export default Navbar
