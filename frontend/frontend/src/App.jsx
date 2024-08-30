@@ -11,7 +11,7 @@ import Verify from './pages/Verify/Verify'
 import MyOrders from './pages/MyOrders/MyOrders'
 // For google Tracking//
 
-import ReactGA from 'react-ga';
+//import ReactGA from 'react-ga';
 
 
 /* Initialize Google Analytics
