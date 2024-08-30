@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -6,6 +6,7 @@ import './ChefSlider.css';
 import { slider } from '../../assets/assets';
 import { errand } from '../../assets/assets';
 import { doctor } from '../../assets/assets';
+
 
 const ChefSlider = () => {
   const [flipped, setFlipped] = useState(false);
