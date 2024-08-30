@@ -6,6 +6,7 @@ import './ChefSlider.css';
 import { slider } from '../../assets/assets';
 import { errand } from '../../assets/assets';
 import { doctor } from '../../assets/assets';
+import { useState } from 'react';
 
 
 const ChefSlider = () => {
