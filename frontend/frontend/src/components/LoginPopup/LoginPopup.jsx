@@ -63,7 +63,7 @@ const LoginPopup = ({setShowLogin}) => {
     }
   }
   return (
-    <div className='Login-popup'>
+    <div className='Login-popup' id='Login'>
       <form onSubmit={onLogIn} className="login-container">
         <div className="login-title">
           <h2>{currState}</h2>

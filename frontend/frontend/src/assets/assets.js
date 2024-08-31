@@ -417,7 +417,7 @@ export const slider = [
      {
     chef: "Chef 6",
      menu_image: chefImage6,
-     text: "Desert Chef - Olalekan"
+     text: "Desert Chef - Emeka"
     
   }
 ];
@@ -434,32 +434,32 @@ export const errand=[
     {
         errand: "Errand 1 = Mr Mike",
         image:errand_1,
-        text:"Want To go to the market? Errand me (Mr. Mike)"
+        text:"Want to go to the market? Errand me (Mr. Mike)"
     },
       {
         errand: "Errand 2 = Mr Wale",
         image:errand_2,
-        text:"Want To go to the market? Errand me (Mr. Hazzan)"
+        text:"Want a delivery guy? Errand me (Mr. Hazzan)"
     },
       {
         errand: "Errand 3 = Mr Adam",
         image:errand_3,
-        text:"Want To go to the market? Errand me (Mr. Adam)"
+        text:"Want a delivery guy ? Errand me (Mr. Adam)"
     },
         {
         errand: "Errand 4 = Mr Adam",
         image:errand_4,
-        text:"Want To go to the market? Errand me (Mr. Wale)"
+        text:"Want to go to the market? Errand me (Mr. Wale)"
     },
           {
         errand: "Errand 5 = Mr Adam",
         image:errand_5,
-        text:"Want To go to the market? Errand me (Miss. Hilda)"
+        text:"Want to advertise your goods ? call me (Miss. Maltida)"
     },
       {
         errand: "Errand 6 = Mr Adam",
         image:errand_6,
-        text:"Want To go to the market? Errand me (Mrs. Funke)"
+        text:"Want to go to the market? Errand (Mrs. Funke)"
     }
 
 ]
@@ -479,32 +479,32 @@ export const doctor=[
     {
         errand: "Doctor 1 = Mr Mike",
         image_doc:doctor_1,
-        text:"Want a doctor? Call {Dr. Chioma}"
+        text:"Need a doctor? Call (Dr. Chioma)"
     },
       {
         errand: "Doctor 2 = Mr Wale",
         image_doc:doctor_2,
-         text:"Want a doctor? Call {Dr. Aminat}"
+         text:"Need a doctor? Call (Dr. Aminat)"
     },
       {
         errand: "Doctor 3 = Mr Adam",
        image_doc:doctor_3,
-         text:"Want a doctor? Call {Dr. Shade}"
+         text:"Need a doctor? Call (Dr. Shade)"
     },
         {
         errand: "Doctor 4 = Mr Adam",
        image_doc:doctor_4,
-         text:"Want a doctor? Call {Dr. Wale }"
+         text:"Need a doctor? Call (Dr. Wale )"
     },
           {
         errand: "Doctor 5 = Mr Adam",
         image_doc:doctor_5,
-        text:"Want a doctor? Call {Dr. Peace}"
+        text:"Need a doctor? Call (Dr. Peace)"
     },
       {
         errand: "Doctor 6 = Mr Adam",
        image_doc:doctor_6,
-        text:"Want a doctor? Call Us"
+        text:"Need a Pharmacist? Call Us"
     }
 
 ]

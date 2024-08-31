@@ -262,16 +262,17 @@ box-sizing: border-box;
 }
 .Explore h1{
   margin-bottom: 0.2rem;
-  font-size: max(1.5vw,18px);
+  font-size: max(1vw,15px);
    font-family: 'Kalnia Glaze';
    width: 100%;
    text-shadow: 0px 1px 1px black;
+  
  
   
 }
 .Explore p{
   color: #747474;
-  font-size: 2.5vw;
+  font-size: 2.6vw;
    margin-bottom: 0.3rem;
   
 }

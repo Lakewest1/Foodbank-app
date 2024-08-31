@@ -1,14 +1,16 @@
 import './Footer.css'
-import {assets} from '../../assets/assets.js'
+import { assets } from '../../assets/assets.js'
+import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
+  
   return (
     <div className='Footer' id='Footer'>
       <div className="Footer-content">
         <div className="Footer-left">
-          <img src={assets.Grova2} alt="" />
+          <img src={assets.Grova2} alt=""  className='footer-img'/>
           <p>Food bank is one of the best order and delivery Food in Nigeria.Our food are topnotch and Nutricious to the core.We remain the best online food bank in your territory.Our customers are our major priority and credibility.We have been into Ecommerce for more than 3years.Our delivery is fast and Cheap. </p>
-          <button>Get Started Today</button>
+          <a href="https://wa.me/message/HK5AY74WUVJ4B1"><button>Need Help ? Call Us</button></a>
           <div className="soc-icon">
             <img src={assets.facebook_icon} alt="" />
             <img src={assets.twitter_icon} alt="" />
@@ -41,7 +43,7 @@ const Footer = () => {
       </div>
       <hr />
       <p className="footer-copyright">
-        Copyright 2024 @ Musa Olalekan Ismail - All Right Reserved.
+        Copyright 2024 @ Musa Olalekan Ismail (L@kewe$t) - All Right Reserved.
       </p>
       
     </div>
