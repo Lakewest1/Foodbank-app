@@ -10,15 +10,14 @@ import LoginPopup from './components/LoginPopup/LoginPopup'
 import Verify from './pages/Verify/Verify'
 import MyOrders from './pages/MyOrders/MyOrders'
 // For google Tracking//
+import ReactGA from 'react-ga';
 
-//import ReactGA from 'react-ga';
 
-
-/* Initialize Google Analytics
+// Initialize Google Analytics
 ReactGA.initialize('G-KE0NBEKGBG');
 
 // Track page views
-ReactGA.pageview(window.location.pathname + window.location.search);*/
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const App = () => {
 
