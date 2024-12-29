@@ -20,6 +20,7 @@ const port = process.env.PORT || 4000      // Bf laughing to github
 // middleware// let initialixe our middleware//
 app.use(express.json())    // this will allow us to pass request from frontend tp backend//
 app.use(cors())            // This will allow us to access the backend from any frontend//
+app.use(express.urlencoded({ extended: true }));
 
 // Db Connection//
 connectDB();

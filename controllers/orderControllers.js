@@ -10,8 +10,9 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);  // Now we have the su
 // We will create arrow function for place Order// Placing user order from front end cart//
 const placeOrder = async (req, res) => {
 
-  const frontend_url = "http://localhost:5173"   // We define the frontend url so we can connect the payment to it//
-
+  //---const frontend_url = "http://localhost:5173"    We define the frontend url so we can connect the payment to it*/
+  
+  const frontend_url = "https://foodbankfrontend.onrender.com/"   
 
 
   try {
@@ -25,6 +26,8 @@ const placeOrder = async (req, res) => {
     await newOrder.save()             // This will save our order in database//
     //After dat we have to clear the order cart//
     await userModel.findByIdAndUpdate(req.body.userId, { cartData: {} })  // This will clear the data
+
+    
     
     //  Now we have to create payment link using stripe====================================================================//
     //====But first we have to fisrt create line-items where we will insert product data,unit amout,quantity//
