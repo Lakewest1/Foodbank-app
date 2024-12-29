@@ -164,6 +164,7 @@ button.menu-toggle{
   background-color: transparent;
   display: flex;
   width: 100%;
+  position: relative;
  }
  .navbar-header{
   display: flex;
@@ -171,13 +172,41 @@ button.menu-toggle{
     width: 100%;
  }
  .beat {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   color: #333;
   background-color: transparent;
   align-items: center;
   justify-content: center;
   margin-top: 15%;
+  margin-right: 5%;
+  margin-left: 2%;
+  animation: beat 1s infinite;
+  width: 100%;
+  
+
 }
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+    opacity: 0; /* Start faded out */
+  }
+  25% {
+    opacity: 1; /* Fade in */
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.5; /* Partially faded */
+  }
+  75% {
+    opacity: 1; /* Fade back in */
+  }
+  100% {
+    transform: scale(1.05);
+    opacity: 1; /* Fully visible */
+  }
+}
+
 .navbar-menu {
   display: none;
   flex-direction: column;
@@ -203,11 +232,37 @@ button.menu-toggle{
   }
 
   .navbar-right {
-    display: none;
+    display: flex;
+    background-color: transparent;
+
   }
+  .search-form{
+    width: 150px;
+    max-height: 20px;
+    border: 2px solid #cacaca;
+    margin-top: 35px;
+  }
+  .search-submit{
+    margin-left: -70px;
+  }
+  .btn {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+ 
+}
+
+ 
  
 }
 @media (max-width: 450px) {
+  img.logo{
+    width: 30px;
+  }
+  
   button.menu-toggle{
   display: block;
   color: white;
@@ -233,12 +288,36 @@ button.menu-toggle{
     
  }
  .beat {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #333;
   background-color: transparent;
   align-items: center;
   justify-content: center;
   margin-top: 15%;
+  width: 50%;
+  text-align: center;
+  position: absolute;
+  animation: beat 1s infinite;
+}
+@keyframes beat {
+  0% {
+    transform: scale(1);
+    opacity: 0; /* Start faded out */
+  }
+  25% {
+    opacity: 1; /* Fade in */
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.5; /* Partially faded */
+  }
+  75% {
+    opacity: 1; /* Fade back in */
+  }
+  100% {
+    transform: scale(1.05);
+    opacity: 1; /* Fully visible */
+  }
 }
 .navbar-menu {
   display: none;
@@ -260,13 +339,41 @@ button.menu-toggle{
   }
 
   .navbar-menu a {
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1rem;
     text-align: center;
   }
 
-  .navbar-right {
-    display: none;
+ .navbar-right {
+    display: flex;
+    background-color: transparent;
+
   }
+  .search-form{
+    width: 150px;
+    max-height: 20px;
+    border: 2px solid #cacaca;
+    margin-top: 35px;
+  }
+   img.search{
+    width: 15px;
+   }
+  .search-submit{
+    margin-left: -70px;
+  }
+  .btn {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 60%;
+ 
+}
+.navbar-basket img{
+  width: 20px;
+}
+
  
 }
 

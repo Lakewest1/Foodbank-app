@@ -37,12 +37,7 @@ const Navbar = ({ setShowLogin }) => {
         <Link to="/">
           <h1 className="beat">Food-Bank</h1>
         </Link>
-        <button
-          className="menu-toggle"
-          onClick={() => setMenuOpen((prev) => !prev)}
-        >
-          ☰
-        </button>
+       
       </div>
 
       <ul className={`navbar-menu ${menuOpen ? 'active' : ''}`}>
@@ -121,7 +116,7 @@ const Navbar = ({ setShowLogin }) => {
 
         {!token ? (
           <button className="btn" onClick={() => setShowLogin(true)}>
-            Sign in
+            Log in
           </button>
         ) : (
           <div className="navbar-profile">
@@ -137,8 +132,15 @@ const Navbar = ({ setShowLogin }) => {
                 LogOut
               </li>
             </ul>
-          </div>
+            </div>
+            
         )}
+         <button
+          className="menu-toggle"
+          onClick={() => setMenuOpen((prev) => !prev)}
+        >
+          ☰
+        </button>
       </div>
     </div>
   );
