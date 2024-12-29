@@ -1,30 +1,72 @@
-.App-download{
-  margin-top: 500px;
-  width: 50%;
-  font-size: max(3vw,20px);
+.App-download {
+  margin-top: 20px;
+  width: 80%; /* Adjust for smaller screens */
+  font-size: max(3vw, 20px);
   margin: auto auto;
   text-align: center;
   font-weight: 500;
-
 }
-.App-download p{
-  font-size: 30px;
+
+.App-download p {
+  font-size: 30px; /* Maintain large font size for headings */
   width: 100%;
   margin-top: 70px;
 }
-.app-download-platform{
+
+.app-download-platform {
   display: flex;
   justify-content: center;
-  gap: max(2vw,10px);
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: max(2vw, 10px);
   margin-top: 40px;
-
 }
-.app-download-platform img{
-  width: max(30vw,120px);
+
+.app-download-platform img {
+  width: max(30vw, 120px); /* Adjust size relative to screen width */
   max-width: 180px;
   transition: 0.5s;
   cursor: pointer;
 }
-.app-download-platform img:hover{
-transform: scale(1.07);
+
+.app-download-platform img:hover {
+  transform: scale(1.07);
+}
+
+/* Responsive adjustments */
+@media (max-width: 750px) {
+  .App-download {
+    width: 90%; /* Increase width for smaller devices */
+    font-size: 18px; /* Slightly reduce font size */
+     margin-top: 20px;
+  }
+
+  .App-download p {
+    font-size: 24px; /* Reduce heading size */
+    margin-top: 50px; /* Reduce margin */
+  }
+
+  .app-download-platform img {
+    width: max(40vw, 100px); /* Increase size flexibility for smaller screens */
+    max-width: 150px;
+  }
+
+  .app-download-platform {
+    gap: 10px; /* Reduce gaps between images */
+  }
+}
+
+@media (max-width: 500px) {
+  .App-download {
+    font-size: 16px; /* Further reduce font size */
+    margin-top: 20px; /* Reduce top margin */
+  }
+
+  .App-download p {
+    font-size: 20px; /* Further reduce heading size */
+  }
+
+  .app-download-platform img {
+    width: max(50vw, 80px); /* Further adjust image sizes */
+    max-width: 120px;
+  }
 }

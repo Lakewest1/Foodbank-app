@@ -9,7 +9,20 @@
 }
 .food-display-list{
 display: grid;
-grid-template-columns:repeat(auto-fill,minmax(240px,1fr));  /*--Good for responsive grid*/
+grid-template-columns:1fr 1fr 1fr ;  /*--Good for responsive grid*/
 gap: 30px;
 row-gap: 50px;
+
+}
+@media (max-width:900px) {
+  .food-display-list{
+display: grid;
+grid-template-columns:1fr 1fr;  /*--Good for responsive grid*/
+gap: 30px;
+row-gap: 50px;
+
+}
+.food-display h2{
+  font-size: 1rem;
+}
 }

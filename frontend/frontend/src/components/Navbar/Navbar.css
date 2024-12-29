@@ -1,327 +1,272 @@
-.Navbar{
-  padding: 20px 0px;
+/* General Navbar Styles */
+.Navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.logo{
-  width: 50%;
-  animation: ratate 1s infinite;
-  margin-right: 40px;
-}
-.beat{
-  background-color: white;
-  padding: 10px 0px;
-  border-radius: 5px;
-  animation: heartBeat 5s ease-in infinite;
-  width: 20%;
-  font-size: 100%;
-  margin-right: 60px;
-}
-
-@keyframes heartBeat {
-  0%,100%{
-    transform: scale(1);
-
-  }
-  10%,30%{
-    transform: scale(1.2);
-   
-  }
-  20%,40%{
-    transform: scale(1);
-   
-  }
-  
-}
-.navbar-menu{
-  display: flex;
-  list-style: none;
-  gap: 20px;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   width: 100%;
 }
-.navbar-right{
+
+.logo {
+  width: 50px;
+}
+
+.beat {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.navbar-menu {
   display: flex;
-  gap: 40px;
-  width: 50%;
-  margin: auto;
-  padding: 10px;
-}
-.btn{
-  background: transparent;
-  font-size: 16px;
-  padding: 10px 30px;
-  color: #49557e;
-  border: 1px solid red;
-  border-radius: 50px;
-  cursor: pointer;
-}
-.btn:hover{
-  background-color: #cacaca;
-  color: white;
-}
-/*--- Styaling the active to do the underline hover*/
-.Navbar .active{
-padding-bottom: 2px;
-border-bottom: 5px dotted #49557e;
-
-
-
-}
-.Navbar li{
-  cursor: pointer;
-}
-/*--- To make the Add to cart display color*/
-.navbar-basket{
- position: relative;
-}
-.navbar-basket .dot{
-  position: absolute;
-  min-width: 10px;
-  min-height: 10px;
-  background-color: red;
-  border-radius: 5px;
-  top: -8px;
-  right:-8px;
-}
-/*--- After this dot for the cart notifiaction we created  pages for our home page*/
-
-/*---------- For Login icon profile*/
-.navbar-profile{
-  position: relative;
-
-}
-.nav-profile-drop-down{
-  position: absolute;
-  display: none;
-  right: 0;
-  z-index: 1;
-}
-.navbar-profile:hover .nav-profile-drop-down{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background-color: #fff2ef;
-  padding: 12px 20px;
-  border: 1px double black;
-  border-radius: 4px;
-  outline: 2px solid white;
   list-style: none;
+  gap: 2rem;
 }
-.nav-profile-drop-down li{
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a.active,
+.navbar-menu a:hover {
+  color: #ff6600;
+}
+
+.navbar-right {
   display: flex;
-  cursor: pointer;
   align-items: center;
-  gap: 10px;
-
+  gap: 2rem;
+  margin-left: 3%;
 }
-.nav-profile-drop-down img{
+
+.search-container {
+  position: relative;
+}
+
+.search {
+  width: 24px;
+  cursor: pointer;
+}
+
+.search-form {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.search-submit {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar-basket {
+  position: relative;
+}
+
+.navbar-basket .dot {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+.navbar-profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-profile-drop-down {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  list-style: none;
+  padding: 0.5rem 0;
+  width: 150px;
+  z-index: 10;
+}
+
+.navbar-profile:hover .nav-profile-drop-down {
+  display: block;
+}
+
+.nav-profile-drop-down li {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.nav-profile-drop-down li:hover {
+  background-color: #f5f5f5;
+}
+
+.nav-profile-drop-down img {
   width: 20px;
-}
-.nav-profile-drop-down li :hover{
-  color: red;
-
+  margin-right: 0.5rem;
 }
 
-
-/*---REsponsivenesss=======================================*/
-@media (max-width:1050px) {
- 
-.Navbar .logo{
-  width: 70%;
-
+.btn {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
-.beat{
-  font-size: 120%;
-  margin-left: 10%;
-}
-.navbar-menu{
-  gap: 20px;
-  font-size: 12px;
-  margin-left: 10%;
-}
-.navbar-right{
-  gap: 30px;
-  width: 100%;
-  padding: 5px;
-  margin-left: 5%;
-}
-.navbar-right .search{
-  width: 22px;
+button.menu-toggle{
   display: none;
 }
-.navbar-basket{
- position: relative;
- width: 20%;
-}
-.navbar-right .btn{
-  padding: 8px 25px;
 
-}
-.Navbar .active{
-padding-bottom: 1px;
-border-bottom: 2px double #49557e;
-}
-
-}
-@media (max-width:900px) {
- 
-.Navbar .logo{
-  width: 120px;
-
-}
-.beat{
-  font-size: 15px;
-  margin-left: 10%;
-}
-.navbar-menu{
-  gap: 15px;
-  font-size: 12px;
-  margin-left: 5%;
-}
-.navbar-right{
-  gap: 20px;
-  width: 100%;
-  padding: 10px;
-  margin-left: 1%;
-}
-.navbar-right .search{
-  width: 22px;
- 
-}
-.navbar-basket{
- position: relative;
- width: 20%;
-}
-.navbar-right .btn{
-  padding: 8px 35px;
-  font-size: 15px;
-
-}
-.Navbar .active{
-padding-bottom: 1px;
-border-bottom: 2px double #49557e;
-
-}
-
-}
-
-
-@media (max-width:750px) {
- .Navbar .logo{
-  width: 100%;
- 
-
-}
-.Navbar h1{
-  font-size: 10px;
-}
-.beat{
-  font-size: 5px;
-  margin-left: 40%;
+/* Responsive Styles */
+@media (max-width: 750px) {
+  button.menu-toggle{
   display: block;
-  border: 0.5px solid black;
-  border-radius: 50px;
-  width: 50%;
-  padding: 10px;
- 
-
-}
-.navbar-menu{
-  gap: 15px;
-  font-size: 10px;
-  margin-left: 5%;
-}
-.navbar-menu li{
-font-size: 160%;
-}
-.navbar-basket{
- position: relative;
- width: 20%;
-}
-.navbar-right{
-  gap: 20px;
-  width: 50%;
-  padding: 10px;
-  margin-left: 2px;
-}
-.navbar-right .btn{
-  padding: 8px 20px;
-  font-size: 10px;
-
-}
-
-
-}
-@media (max-width:450px) {
-  .Navbar{
-    width: 100%;
-    background-color: white;
-    border: 1px solid #a88787;
-    border-radius: 30px;
-    margin-top: 20px;
-    padding: 5px;
-  }
-  .Navbar .logo{
-  width: 100%;
-  
-}
-  .beat{
-  font-size: 5px;
-  margin-left: 40%;
-  display: block;
-  border-radius: 10px;
-  width: 50%;
-  padding: 10px;
-  border: 1px solid #cacaca;
-
-
-}
-.navbar-menu{
-  display: none;
-}
-.navbar-right{
-  width: 100%;
- 
-
-}
-.Navbar h1{
-  font-size: 10px;
-  
-}
-.navbar-right .search{
-  width: 22px;
-  display: block;
-  margin-right: 5%;
-  display: none;
- 
-}
-.navbar-basket{
- position: relative;
- width: 20%;
-}
-.navbar-basket img{
-
- margin-top: 45%;
-}
-.navbar-right .btn{
-  padding: 2px 10px;
-  font-size: 12px;
-  border: 1px solid #cacaca;
-   margin-left: 10px;
-   border-radius: 60px;
-   background-color: black;
-   color: white;
-   width: 50%;
-
-
-}
-.navbar-profile{
-  border: 1px solid cadetblue;
+  color: white;
+  font-weight: 900;
+  border: 2px solid white;
+  background-color: #333;
   border-radius: 50%;
   padding: 5px;
-  margin-left: 10px;
+  font-size:1.1rem
 }
+ .Navbar{
+  background-color: transparent;
+  display: flex;
+  width: 100%;
+ }
+ .navbar-header{
+  display: flex;
+  justify-content: space-between;
+    width: 100%;
+ }
+ .beat {
+  font-size: 1.1rem;
+  color: #333;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15%;
+}
+.navbar-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Glass effect */
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Light border for subtle separation */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
 }
 
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-menu a {
+    padding: 0.5rem 2rem;
+    text-align: center;
+  }
+
+  .navbar-right {
+    display: none;
+  }
+ 
+}
+@media (max-width: 450px) {
+  button.menu-toggle{
+  display: block;
+  color: white;
+  font-weight: 900;
+  border: 2px solid white;
+  background-color: #333;
+  border-radius: 50%;
+  padding: 5px;
+  font-size:1.1rem
+}
+ .Navbar{
+  background-color: transparent;
+  display: flex;
+  width: 100%;
+ }
+ .navbar-header{
+  display: flex;
+  justify-content: space-between;
+    width: 100%;
+    background-color:transparent;
+    padding: 0;
+    margin: 0;
+    
+ }
+ .beat {
+  font-size: 1.1rem;
+  color: #333;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15%;
+}
+.navbar-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Glass effect */
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Light border for subtle separation */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-menu a {
+    padding: 0.5rem 2rem;
+    text-align: center;
+  }
+
+  .navbar-right {
+    display: none;
+  }
+ 
+}
 
