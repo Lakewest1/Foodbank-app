@@ -36,21 +36,50 @@ app.use("/api/order",orderRouter)      // Now u can go to controller and set the
 //Security=================//
 
 app.use((req, res, next) => {
+  // ========================
   // Core Security Headers
-  res.setHeader('Strict-Transport-Security', 'max-age=63072000; includeSubDomains');
+  // ========================
+  res.setHeader('Strict-Transport-Security', 'max-age=63072000; includeSubDomains'); // 2 years
   res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'DENY'); // Fallback for older browsers
   res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
-  
-  // Advanced Protection
+  res.setHeader('Permissions-Policy', "geolocation=(), microphone=(), camera=(), payment=()");
+
+  // ========================
+  // Advanced Isolation
+  // ========================
   res.setHeader('Cross-Origin-Opener-Policy', 'same-origin');
-  res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
-  
-  // CSP (Customize based on your dependencies)
-  res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests;");
+  res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp'); // Enables SharedArrayBuffer
+  res.setHeader('Cross-Origin-Resource-Policy', 'same-origin');
+
+  // ========================
+  // Content Security Policy
+  // ========================
+  res.setHeader(
+    'Content-Security-Policy',
+    [
+      "default-src 'self'", // Default fallback
+      "script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net", // Allow JS CDNs
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com", // Allow inline styles (required for some libs)
+      "img-src 'self' data: https: blob:", // Allow data URIs and external images
+      "font-src 'self' https://fonts.gstatic.com",
+      "connect-src 'self' https://api.foodbank-app.onrender.com", // API endpoints
+      "frame-src 'none'", // Block all iframes
+      "form-action 'self'", // Restrict form submissions
+      "base-uri 'self'", // Prevent base tag hijacking
+      "upgrade-insecure-requests" // Force HTTPS
+    ].join('; ')
+  );
+
+  // ========================
+  // Additional Protections
+  // ========================
+  res.setHeader('X-XSS-Protection', '1; mode=block'); // Legacy XSS protection
+  res.setHeader('X-Permitted-Cross-Domain-Policies', 'none');
+  res.setHeader('Cache-Control', 'no-store, max-age=0'); // For sensitive pages
   
   next();
 });
-
 // To send request from backend to frontend//end
 app.get("/", (req,res) => {
   res.send("API is working")             // anything we put here we show in frontend//
