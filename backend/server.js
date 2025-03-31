@@ -33,7 +33,23 @@ app.use("/api/cart", cartRouter)        // This is for the cart logic//
 app.use("/api/order",orderRouter)      // Now u can go to controller and set the stripe and the logic to place order//
 
 
+//Security=================//
 
+app.use((req, res, next) => {
+  // Core Security Headers
+  res.setHeader('Strict-Transport-Security', 'max-age=63072000; includeSubDomains');
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  
+  // Advanced Protection
+  res.setHeader('Cross-Origin-Opener-Policy', 'same-origin');
+  res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
+  
+  // CSP (Customize based on your dependencies)
+  res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests;");
+  
+  next();
+});
 
 // To send request from backend to frontend//end
 app.get("/", (req,res) => {
